@@ -120,7 +120,8 @@ $prefix = 'iro_options';
             'type'    => 'color',
             'title'   => __('Color','sakurairo_csf'),
             'desc'    => __('Customize the colors, light colors are recommended','sakurairo_csf'),
-          ),      
+      ),
+
         ),
         'default'        => array(
           'text'    => '花になって',
@@ -1156,7 +1157,34 @@ $prefix = 'iro_options';
         'type' => 'slider',
         'step' => '10',
         'max' => '10000',
-      ), 
+      ),
+
+      array(
+        'id' => 'custom_preload_animation',
+        'type' => 'switcher',
+        'title' => __('Enable Custom Preload Animation', 'sakurairo_csf'),
+        'dependency' => array( 'preload_animation', '==', 'true', '', 'true' ),
+        'label' => __('When enabled, you can upload custom image/GIF and text for preload animation.', 'sakurairo_csf'),
+        'default' => false
+      ),
+
+      array(
+        'id' => 'custom_preload_image',
+        'type' => 'upload',
+        'title' => __('Upload Custom Preload Animation File', 'sakurairo_csf'),
+        'dependency' => array( 'custom_preload_animation', '==', 'true', '', 'true' ),
+        'desc' => __('Upload PNG, GIF, or other image files for custom preload animation. Recommended size: 100x100px.', 'sakurairo_csf'),
+        'library' => 'image',
+      ),
+
+      array(
+        'id' => 'custom_preload_text',
+        'type' => 'text',
+        'title' => __('Custom Loading Text', 'sakurairo_csf'),
+        'dependency' => array( 'custom_preload_animation', '==', 'true', '', 'true' ),
+        'desc' => __('Custom text displayed below the animation, e.g., "Loading..."', 'sakurairo_csf'),
+        'default' => __('Loading...', 'sakurairo_csf')
+      ),
 
       array(
         'id' => 'sakura_falling_effects',
