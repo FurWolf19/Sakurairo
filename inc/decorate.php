@@ -225,6 +225,27 @@ html {
 }
 <?php endif; ?>
 
+<?php if (iro_opt('preload_animation', 'true') && iro_opt('custom_preload_animation', false)) : ?>
+.custom-preload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.custom-preload-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 20px;
+}
+.custom-preload-text {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+}
+<?php endif; ?>
+
 /*深色模式*/
 /*可变项目*/
 
