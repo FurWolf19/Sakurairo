@@ -143,9 +143,18 @@ header('X-Frame-Options: SAMEORIGIN');
 <body <?php body_class(); ?>>
     <?php if (iro_opt('preload_animation', 'true')) : ?>
         <div id="preload">
-            <li data-id="3" class="active">
-                <div id="preloader_3"></div>
-            </li>
+            <?php if (iro_opt('custom_preload_animation', false) && iro_opt('custom_preload_image', '')) : ?>
+                <div class="custom-preload-container">
+                    <img src="<?php echo esc_url(iro_opt('custom_preload_image')); ?>" alt="<?php esc_attr_e('Loading', 'sakurairo'); ?>" class="custom-preload-image" />
+                    <?php if (iro_opt('custom_preload_text', '')) : ?>
+                        <div class="custom-preload-text"><?php echo esc_html(iro_opt('custom_preload_text')); ?></div>
+                    <?php endif; ?>
+                </div>
+            <?php else : ?>
+                <li data-id="3" class="active">
+                    <div id="preloader_3"></div>
+                </li>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
     <div class="scrollbar" id="bar"></div>
