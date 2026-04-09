@@ -2094,3 +2094,31 @@ msgstr ""
 
 #~ msgid "Please do not try to use Javascript in your comments!"
 #~ msgstr "请不要尝试在你的评论中添加JavaScript!"
+
+#: opt/options/theme-options.php:1163
+msgid "Enable Custom Preload Animation"
+msgstr "开启自定义预加载动画"
+
+#: opt/options/theme-options.php:1167
+msgid "When enabled, you can upload custom image/GIF and text for preload animation."
+msgstr "开启后，您可以上传自定义图片/GIF和文字作为预加载动画。"
+
+#: opt/options/theme-options.php:1174
+msgid "Upload Custom Preload Animation File"
+msgstr "上传自定义预加载动画文件"
+
+#: opt/options/theme-options.php:1176
+msgid "Upload PNG, GIF, or other image files for custom preload animation. Recommended size: 100x100px."
+msgstr "上传PNG、GIF或其他图片文件作为自定义预加载动画。建议尺寸：100x100px。"
+
+#: opt/options/theme-options.php:1183
+msgid "Custom Loading Text"
+msgstr "自定义加载句子"
+
+#: opt/options/theme-options.php:1185
+msgid "Custom text displayed below the animation, e.g., \"Loading...\""
+msgstr "显示在动画下方的自定义文字，例如“网站加载中”"
+
+#: opt/options/theme-options.php:1186
+msgid "Loading..."
+msgstr "网站加载中..."
